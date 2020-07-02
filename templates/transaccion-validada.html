@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Market - Nueva Transaccion</title>
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/skeleton.css">
+    <style>
+        * #main {
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        
+        #divleft {
+            margin-left: 150px;
+            margin-right: 100px;
+            margin-top: 10px;
+            width: 400;
+            float: left;
+        
+
+        }
+        #divright
+        {
+        
+            margin-left: 0px;
+            margin-top: 10px;
+            float: left;
+        }
+        #PU 
+        {
+            margin-left: 100px;
+            margin-top: 60px;
+            float: left;
+            font-size: 0.7cm;
+        }
+        #error 
+        {
+            margin-left: 100px;
+            margin-top: 60px;
+            float: left;
+        }
+
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<base href="bitcoinmarket.com/nuevatransaccion">
+<body>
+    <div id="main">
+        <button style="background-color:rgb(13, 248, 248); border:none;
+        color: rgb(19, 14, 14);" onclick="location.href = '/';">Atrás</button>
+        <h1 style="padding-top: 50px;">Nueva Transacción</h1> 
+    </div>
+    
+    <div id="divleft" >
+    <form action="/nuevatransaccion" method="POST">
+    <h2 style="padding-top: 50px;">From</h2>
+    <label for="from">Elige una moneda:</label>
+    <select id="from" name="from" defa>
+        {% for datos in monedafrom %}
+        <option selected="selected">
+            {{ datos }}
+        {% endfor %}   
+        </option>
+        <option value="EUR">EUR</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="XRP">XRP</option>
+        <option value="LTC">LTC</option>
+        <option value="BNB">BNB</option>
+        <option value="USDT">USDT</option>
+        <option value="BCH">BCH</option>
+        <option value="EOS">EOS</option>
+        <option value="BSV">BSV</option>
+        <option value="XLM">XLM</option>
+        <option value="ADA">ADA</option>
+        <option value="TRX">TRX</option>
+
+    </select>
+    
+    <h2 style="padding-top: 50px;" >Q</h2>
+    
+    <label for="cantidad">Elige cantidad a aportar:</label>
+    {% for datos in cantidadamount %}
+    <input type="text" id="cantidad"  name="cantidad" value='{{ datos }}'><br><br>
+    {% endfor %}  
+    <button type="submit" formaction="/nuevatransaccion-validacion" name="calculator" style="font-size:24px"><i class="fa fa-calculator" ></i></button>
+    {% for datos in textoerror %}
+    <br><br>
+         <output id="out">{{ datos }}</output>
+    {% endfor %}    
+    </div>
+    
+    
+    <div id="divright">
+    <h2 style="padding-top: 50px;">To</h2>
+    <label for="from">Elige una moneda:</label>
+    <select id="To" name="To">
+        {% for datos in monedato %}
+        <option selected="selected">
+            {{ datos }}
+        {% endfor %} 
+        <option value="EUR">EUR</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="XRP">XRP</option>
+        <option value="LTC">LTC</option>
+        <option value="BNB">BNB</option>
+        <option value="USDT">USDT</option>
+        <option value="BCH">BCH</option>
+        <option value="EOS">EOS</option>
+        <option value="BSV">BSV</option>
+        <option value="XLM">XLM</option>
+        <option value="ADA">ADA</option>
+        <option value="TRX">TRX</option>
+    </select>
+    <h2 style="padding-top: 50px;">Q</h2>
+    <label for="cantidad2">Cantidad a Recibir:</label>
+    {% for datos in tocantidad %}
+    <output>{{ datos }}</output>
+    {% endfor %}
+
+    <br><br>
+    <input style="margin-top: 27px;" type="submit" name="aceptar" value="Aceptar">
+    </form>
+    </div>
+    <div id="PU" >
+        <label for="fname">Precio Unitario:</label>
+        {% for datos in preciounitario %}
+        <output id="out">{{ datos }}</output>
+        {% endfor %}
+        
+    </div>
+
+    
+</body>
+</html>

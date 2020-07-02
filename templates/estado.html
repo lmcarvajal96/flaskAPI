@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Market - Inicio</title>
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/skeleton.css">
+    <style>
+        * 
+            h1 {
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        #main {
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<base href="bitcoinmarket.com/index">
+<body>
+    <div id="main">
+        <button style="background-color:rgb(13, 248, 248); border:none;
+        color: rgb(19, 14, 14);" onclick="location.href = '/';">Atrás</button>
+    </div>
+    <h1>Estado de la Inversión</h1>
+    <br>
+    <br>
+    <br>
+    <p style="width: 451px; display: table; margin-left: 150px;">
+        {% for datos in invertido %}
+        <span style="display: table-cell; width: 160px; font-size: 30px;">Invertido €: </span>
+        <span style="text-align: center; font-size: 30px; display: table-cell; border-bottom: 1px solid black;">{{ datos }}</span>
+        {% endfor %}
+    </p>
+    <br>
+    <br>
+    <br>
+    <p style="width: 451px; display: table; margin-left: 150px;">
+        {% for datos in valoractual %}
+        <span style="display: table-cell; width: 200px; font-size: 30px;">Valor Actual €: </span>
+        <span style="text-align: center; font-size: 30px; display: table-cell; border-bottom: 1px solid black;">{{ datos }}</span>
+        {% endfor %}
+    </p>
+    
+</body>
+</html>

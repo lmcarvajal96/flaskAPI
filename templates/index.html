@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Market - Inicio</title>
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/skeleton.css">
+    <style>
+        * table {
+            margin-left: 150px;
+            margin-top: 150px;
+        }
+            h1 {
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+            #status {
+            margin-left: 150px;
+            font-size:154px;
+            float: left;
+        }
+            #add {
+            margin-left: 345px;
+            font-size:154px;
+            float: left;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<base href="bitcoinmarket.com/index">
+<body>
+    <h1>Lista Movimientos</h1>
+    <table>
+        </tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>From</th>
+            <th>From-Q</th>
+            <th>To</th>
+            <th>To-Q</th>
+            <th>P.U.</th>
+        </tr>
+        {% for resultado in resultado %}
+        </tr>
+            <td class='resultado'>{{ resultado[1] }}</td>
+            <td>{{ resultado[2] }}</td>
+            <td>{{ resultado[3] }}</td>
+            <td>{{ resultado[4] }}</td>
+            <td>{{ resultado[5] }}</td>
+            <td>{{ resultado[6] }}</td>
+            <td>{{ resultado[7] }}</td>
+        
+
+        </tr>
+        {% endfor %}
+    </table>
+    <div id="status" onclick="location.href = '/estado';">
+    <button>Status</button>
+    </div>
+    <div id="add" >
+    <button onclick="location.href = '/nuevatransaccion';" ><i class="fa fa-plus"></i></button>
+    </div>
+   
+</body>
+</html>
