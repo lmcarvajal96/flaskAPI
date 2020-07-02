@@ -1,4 +1,4 @@
-CREATE TABLE "movimientos" (
+CREATE TABLE "MovimientosCoin" (
 	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	"Fecha"	TEXT,
 	"Hora"	TEXT,
