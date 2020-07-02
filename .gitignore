@@ -2,7 +2,7 @@ venv/
 .vscode/
 __pycache__/
 .env
-_config.py
+config.py
 data/bitcoin.db
 tets.py
 cargadata.py

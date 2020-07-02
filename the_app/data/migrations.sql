@@ -1,0 +1,10 @@
+CREATE TABLE "movimientos" (
+	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"Fecha"	TEXT,
+	"Hora"	TEXT,
+	"From"	TEXT,
+	"From-Q"	TEXT,
+	"To"	TEXT,
+	"To-Q"	TEXT,
+	"P.U."	TEXT
+);
