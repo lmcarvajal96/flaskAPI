@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, redirect
+from the_app import app
 import requests
 import sqlite3
-BASE_DATOS = "./data/bitcoin.db"
+
+BASE_DATOS = app.config['BASE_DATOS']
 
 def todos_los_datos(amount,symbol,convert):
     URL = "https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount={}&symbol={}&convert={}&CMC_PRO_API_KEY=fb774f8c-16a5-43a8-9f31-8646b426bc3e"

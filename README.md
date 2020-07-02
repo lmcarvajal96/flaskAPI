@@ -1,8 +1,10 @@
 # API Coinmarket compraventa
 
 ## Instalación 
-Ejecutar
+1. Ejecutar
 ```
 pip install -r requirements.txt 
 
 ```
+
+2. Crear `_config_template.py`
