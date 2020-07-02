@@ -7,3 +7,4 @@ data/bitcoin.db
 tets.py
 cargadata.py
 boot_z_5.pem
+config.py
