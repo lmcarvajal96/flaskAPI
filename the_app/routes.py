@@ -15,8 +15,13 @@ def index():
     query = "SELECT * FROM movimientos;"
     resultado = cur.execute(query).fetchall()
     conn.close()
-    return render_template('index.html', resultado=resultado)
- #
+    if len(resultado) == 0:
+        return render_template('index_inicial.html') 
+    else:
+        return render_template('index.html', resultado=resultado)   
+        
+
+ 
 
 @app.route("/nuevatransaccion", methods=['GET','POST'])
 def nuevatransaccion():

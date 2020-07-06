@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/static/skeleton.css">
     <style>
         * 
-            h1 {
+      
+    
+        h2 {
             margin-left: 150px;
             margin-top: 50px;
         }
@@ -23,11 +25,21 @@
 
 <base href="bitcoinmarket.com/index">
 <body>
+    <div style="padding: 60px;
+    text-align: left;
+    background-color:rgb(96, 225, 251);
+    font-size: 30px;
+    margin-left: 0px;
+    margin-top: 0px;" class="header">
+
+    <h1>myCRYPTO</h1>
+    <p>Bienvenido al mercado de intercambio de criptomonedas más grande del mundo</p>
+    </div>
     <div id="main">
-        <button style="background-color:rgb(13, 248, 248); border:none;
+        <button style="background-color:rgb(96, 225, 251); border:none;
         color: rgb(19, 14, 14);" onclick="location.href = '/';">Atrás</button>
     </div>
-    <h1>Estado de la Inversión</h1>
+    <h2>Estado de la Inversión</h2>
     <br>
     <br>
     <br>
@@ -46,6 +58,12 @@
         <span style="text-align: center; font-size: 30px; display: table-cell; border-bottom: 1px solid black;">{{ datos }}</span>
         {% endfor %}
     </p>
-    
+    <footer style="margin-top: 100px;
+    padding: 60px;
+    text-align: left;
+    background-color:  rgb(96, 225, 251);
+    font-size: 30px;">
+        &copy; 2020 - Todos los derechos reservados
+    </footer>
 </body>
 </html>

@@ -14,6 +14,12 @@
             margin-left: 150px;
             margin-top: 50px;
         }
+            #out {
+            margin-left: 150px;
+            margin-top: 50px;
+            float: left;
+        }
+            
             #status {
             margin-left: 150px;
             font-size:154px;
@@ -51,19 +57,9 @@
             <th>To-Q</th>
             <th>P.U.</th>
         </tr>
-        {% for resultado in resultado %}
         </tr>
-            <td class='resultado'>{{ resultado[1] }}</td>
-            <td>{{ resultado[2] }}</td>
-            <td>{{ resultado[3] }}</td>
-            <td>{{ resultado[4] }}</td>
-            <td>{{ resultado[5] }}</td>
-            <td>{{ resultado[6] }}</td>
-            <td>{{ resultado[7] }}</td>
-        
-
-        </tr>
-        {% endfor %}
+            <td colspan="7" style="font-size: 32px;">No hay movimientos</td>
+           
     </table>
     <div id="status" onclick="location.href = '/estado';">
     <button>Status</button>
