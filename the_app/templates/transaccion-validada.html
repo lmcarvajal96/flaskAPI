@@ -75,6 +75,7 @@
             {{ datos }}
         {% endfor %}   
         </option>
+        
         <option value="EUR">EUR</option>
         <option value="BTC">BTC</option>
         <option value="ETH">ETH</option>
@@ -97,6 +98,16 @@
     {% for datos in cantidadamount %}
     <input type="text" id="cantidad"  name="cantidad" value='{{ datos }}'><br><br>
     {% endfor %}  
+    
+    {% for datos in preciounitarioanterior %}
+    <input type="hidden" id="PUV" name="PUV" value={{ datos }}>
+    {% endfor %}
+    {% for datos in monedatohidden %}
+    <input type="hidden" id="monedatohidden" name="monedatohidden" value={{ datos }}>
+    {% endfor %}
+    {% for datos in monedafromhidden %}
+    <input type="hidden" id="monedafromhidden" name="monedafromhidden" value={{ datos }}>
+    {% endfor %}
     <button type="submit" formaction="/nuevatransaccion-validacion" name="calculator" style="font-size:24px"><i class="fa fa-calculator" ></i></button>
     {% for datos in textoerror %}
     <br><br>
@@ -113,6 +124,7 @@
         <option selected="selected">
             {{ datos }}
         {% endfor %} 
+        
         <option value="EUR">EUR</option>
         <option value="BTC">BTC</option>
         <option value="ETH">ETH</option>
@@ -153,6 +165,6 @@
     clear: both;">
         &copy; 2020 - Todos los derechos reservados
     </footer>
-    
+
 </body>
 </html>

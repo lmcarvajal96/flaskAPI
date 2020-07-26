@@ -4,10 +4,11 @@ import requests
 import sqlite3
 
 BASE_DATOS = app.config['BASE_DATOS']
+API_KEY = app.config['API_KEY']
 
 def todos_los_datos(amount,symbol,convert):
-    URL = "https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount={}&symbol={}&convert={}&CMC_PRO_API_KEY=fb774f8c-16a5-43a8-9f31-8646b426bc3e"
-    respuesta = requests.get(URL.format(amount,symbol,convert))
+    URL = "https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount={}&symbol={}&convert={}&CMC_PRO_API_KEY={}"
+    respuesta = requests.get(URL.format(amount,symbol,convert,API_KEY))
     mijson = respuesta.json()
     price = mijson.get('data')['quote'].get(convert).get("price")
     price = float(price)
